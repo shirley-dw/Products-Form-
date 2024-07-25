@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #aea0d9;
+    --primary-color-bold: #4ecb7e; 
+    --secondary-text-color: #fff;
+    --ff-text: "DM Sans", sans-serif;
+}
+body {
+    background-image: url("./assets/svg.png"); /* ruta al archivo SVG */
+    background-size: 100% 100%; /* ajusta el tamaño de la imagen al tamaño del body */
+    background-repeat: no-repeat; /* evita que la imagen se repita */
+    background-position: center; /* centra la imagen horizontalmente */
+    height: 100vh; /* establece la altura del body en 100% de la pantalla */
+    margin: 0; /* elimina el margen del body */
+  }
+.formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin:  auto; /* Agrega auto para centrar el formulario */
+    background-color: grey;
+    border: 0.1% ;/* 0.1% es un valor muy pequeño */
+    border-radius: 1em;
+    position: relative;
+    top: 4em;
+    width: 50%; /* Ancho de cada card */
+    height: 60%; 
+}
+.text{/* Formato de label + textarea */
+display: flex;
+font-family: var(--ff-text);
+font-size: 12px;
+}
+
+input{
+    font-family: "Roboto", sans-serif;
+    width: 20em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    column-gap: 60px;  
+}
+textarea{
+    font-family: "Roboto", sans-serif;
+    width: 20em;
+    height: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    column-gap: 60px;
+}
+button{
+    background-color: var(--primary-color);
+    font-family: "Roboto", sans-serif;
+    width: 20em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+   
+}
+
+/* Estilos para pantallas pequeñas (mobile) */
+@media (max-width: 480px) {
+    .formulario {
+       width: 90%; /* Ancho de cada card */
+       height: 50%;
+     }
+   
+     input, textarea, button {
+       width: 10em;
+       height: 1em; /* altura para input y button */
+       height: 2em; /* altura para textarea */
+     }
+   }
